@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rex Ravita II - My Computer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Windows XP Luna Blue Theme Variables */
+        :root {
+            --xp-blue: #3A6EA5; /* Window Title Bar / Active Color */
+            --xp-green: #6C9241; /* Start Button Green */
+            --xp-dialog-bg: #EBE9D8; /* Standard Dialog Background */
+            --xp-input-bg: #FFFFFF;
+            --xp-shadow: #7F7F7F;
+        }
+
+        body {
+            /* XP default background color */
+            background-color: #3A6EA5; 
+            font-family: 'Tahoma', 'Arial', sans-serif;
+            color: #000000;
+            padding: 10px;
+            min-height: 100vh;
+        }
+
+        /* Standard Windows XP Container/Window */
+        .xp-window {
+            background-color: var(--xp-dialog-bg);
+            border-top: 1px solid white;
+            border-left: 1px solid white;
+            border-right: 1px solid var(--xp-shadow);
+            border-bottom: 1px solid var(--xp-shadow);
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Window Title Bar */
+        .xp-title-bar {
+            background: linear-gradient(to right, #24589C, #5C94D8);
+            color: white;
+            padding: 3px 6px;
+            font-weight: bold;
+            font-size: 0.875rem;
+            border-bottom: 1px solid var(--xp-shadow);
+        }
+
+        /* XP Button Styling */
+        .xp-button {
+            background-color: #E6E0DD;
+            padding: 3px 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-top: 1px solid white;
+            border-left: 1px solid white;
+            border-right: 1px solid #7F7F7F;
+            border-bottom: 1px solid #7F7F7F;
+            cursor: pointer;
+            transition: all 0.1s;
+        }
+
+        .xp-button:active {
+            border-top: 1px solid #7F7F7F;
+            border-left: 1px solid #7F7F7F;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
+            box-shadow: inset 1px 1px 1px #000000;
+        }
+
+        /* XP Input Field Styling (sunken effect) */
+        .xp-input {
+            border: 1px solid #7F7F7F;
+            background-color: var(--xp-input-bg);
+            box-shadow: inset 1px 1px 2px #C2C2C2;
+            padding: 2px 4px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        /* XP List/Content Box */
+        .xp-content-box {
+            border: 1px solid #7F7F7F;
+            background-color: white;
+            box-shadow: inset 1px 1px 2px #C2C2C2;
+            padding: 8px;
+        }
+
+        /* File Icon Simulation */
+        .xp-icon {
+            color: #FF9900; /* Yellow/Orange folder icon color */
+            margin-right: 6px;
+        }
+    </style>
+</head>
+
+<body class="p-4 md:p-10">
+
+    <div class="max-w-5xl mx-auto">
+        
+        <!-- ============================================= -->
+        <!-- 1. HERO SECTION (Welcome Window) -->
+        <!-- ============================================= -->
+        <section id="hero" class="xp-window w-full max-w-xl mx-auto">
+            <div class="xp-title-bar">Welcome.exe</div>
+            <div class="p-6 text-center">
+                <img src="https://placehold.co/100x100/3A6EA5/FFFFFF?text=RRII" alt="User Icon" class="mx-auto mb-4 border-2 border-white shadow-md">
+                <h1 class="text-3xl font-extrabold text-gray-800 mb-2">Rex Ravita II</h1>
+                <p class="text-xl font-semibold text-gray-600 mb-6">Social Media Manager | Content Creator | Graphic Designer</p>
+                <p class="text-sm text-gray-700">
+                    I’m driven by a passion for content creation and constantly finding fresh, creative ways to tell stories across every medium.
+                </p>
+                <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})" class="xp-button mt-6">
+                    View My Profile &gt;
+                </button>
+            </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- 2. ABOUT/SKILLS SECTION (My Documents Window) -->
+        <!-- ============================================= -->
+        <section id="about" class="xp-window w-full mt-10">
+            <div class="xp-title-bar">My Documents - About Me</div>
+            <div class="p-4 grid md:grid-cols-3 gap-6">
+                
+                <!-- Left Column: Bio Text -->
+                <div class="md:col-span-2 space-y-4">
+                    <h3 class="text-lg font-bold border-b border-gray-400 text-gray-700 pb-1">Professional Summary:</h3>
+                    <div class="xp-content-box space-y-3 text-sm">
+                        <p>
+                            I’m Rex Ravita II, a content creator and social media manager with a passion for turning ideas into scroll-stopping stories. I’ve managed digital strategy and visual content for brands like **NewsRadio 1080 KRLD** and **Footprint Project**.
+                        </p>
+                        <p>
+                            I currently lead social media at **Clapper**, helping the app grow its community and voice through bold, engaging content. Whether I’m behind the camera or behind the scenes, I’m driven by constantly finding fresh, creative ways to tell stories across every medium.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Skills List (System Info) -->
+                <div>
+                    <h3 class="text-lg font-bold border-b border-gray-400 text-gray-700 pb-1">Core Services:</h3>
+                    <ul class="xp-content-box space-y-2 text-sm">
+                        <li class="flex items-center"><i data-lucide="folder" class="w-4 h-4 xp-icon"></i>Social Media Strategy</li>
+                        <li class="flex items-center"><i data-lucide="folder" class="w-4 h-4 xp-icon"></i>Content Creation (UGC)</li>
+                        <li class="flex items-center"><i data-lucide="folder" class="w-4 h-4 xp-icon"></i>Graphic Design</li>
+                        <li class="flex items-center"><i data-lucide="folder" class="w-4 h-4 xp-icon"></i>Video Editing (Short-Form)</li>
+                        <li class="flex items-center"><i data-lucide="folder" class="w-4 h-4 xp-icon"></i>Brand Visual Identity</li>
+                        <li class="flex items-center"><i data-lucide="folder" class="w-4 h-4 xp-icon"></i>Audio Production</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- 3. PROJECTS SECTION (Portfolio Explorer) -->
+        <!-- ============================================= -->
+        <section id="projects" class="xp-window w-full mt-10">
+            <div class="xp-title-bar">My Computer - Portfolio Explorer</div>
+            <div class="p-4">
+                <h3 class="text-lg font-bold text-gray-700 mb-4">Files Found: 6</h3>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Project Card 1: Clapper -->
+                    <div class="xp-content-box p-3 space-y-2">
+                        <div class="flex items-center">
+                            <i data-lucide="folder-open" class="w-6 h-6 xp-icon text-yellow-600"></i>
+                            <h4 class="font-bold text-md">Clapper Project</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs">Leading content strategy, managing community engagement, and driving platform growth.</p>
+                        <a href="#clapper-details" class="text-xs text-blue-800 font-semibold hover:underline">Open File &gt;</a>
+                    </div>
+
+                    <!-- Project Card 2: NewsRadio 1080 KRLD -->
+                    <div class="xp-content-box p-3 space-y-2">
+                         <div class="flex items-center">
+                            <i data-lucide="file-text" class="w-6 h-6 xp-icon text-blue-500"></i>
+                            <h4 class="font-bold text-md">KRLD Visual Identity</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs">Created a visual brand identity and optimized news stories for social audiences.</p>
+                        <a href="https://www.audacy.com/krld/authors/rex-ravita-ii" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-800 font-semibold hover:underline">Open File &gt;</a>
+                    </div>
+
+                    <!-- Project Card 3: Footprint Project -->
+                    <div class="xp-content-box p-3 space-y-2">
+                        <div class="flex items-center">
+                            <i data-lucide="globe" class="w-6 h-6 xp-icon text-green-600"></i>
+                            <h4 class="font-bold text-md">Footprint Project - SMM</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs">Managed social media accounts, creating content to highlight disaster response.</p>
+                        <a href="#footprint-details" class="text-xs text-blue-800 font-semibold hover:underline">Open File &gt;</a>
+                    </div>
+
+                    <!-- Project Card 4: Cosmic Sense -->
+                    <div class="xp-content-box p-3 space-y-2">
+                         <div class="flex items-center">
+                            <i data-lucide="monitor-play" class="w-6 h-6 xp-icon text-red-600"></i>
+                            <h4 class="font-bold text-md">Cosmic Sense Feature</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs">Conceptualized and produced a weekly national feature covering space, including audio/video components.</p>
+                        <a href="https://www.youtube.com/watch?v=l0fshzzui5c&t=633s" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-800 font-semibold hover:underline">Open File &gt;</a>
+                    </div>
+                    
+                    <!-- Project Card 5: Short-Form Video & UGC -->
+                    <div class="xp-content-box p-3 space-y-2">
+                         <div class="flex items-center">
+                            <i data-lucide="video" class="w-6 h-6 xp-icon text-purple-600"></i>
+                            <h4 class="font-bold text-md">Short-Form Video & UGC</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs">Pioneered vertical video strategy (TikTok, Reels, Shorts) for social channels and UGC engagement.</p>
+                        <a href="https://www.instagram.com/reel/C5WXEApuKXN/" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-800 font-semibold hover:underline">Open File &gt;</a>
+                    </div>
+                    
+                    <!-- Project Card 6: Misc. Graphic Design -->
+                    <div class="xp-content-box p-3 space-y-2">
+                         <div class="flex items-center">
+                            <i data-lucide="palette" class="w-6 h-6 xp-icon text-green-500"></i>
+                            <h4 class="font-bold text-md">Graphic Design Files</h4>
+                        </div>
+                        <p class="text-gray-600 text-xs">A curated selection of diverse graphic design projects, demonstrating versatility in visual communication.</p>
+                        <a href="mailto:rexravita@gmail.com" class="text-xs text-blue-800 font-semibold hover:underline">Open File &gt;</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================= -->
+        <!-- 4. CONTACT SECTION (New Mail Dialog) -->
+        <!-- ============================================= -->
+        <section id="contact" class="xp-window w-full max-w-lg mx-auto mt-10">
+            <div class="xp-title-bar">New Message - Contact Rex</div>
+            <div class="p-6">
+                
+                <form class="space-y-4">
+                    <div class="flex flex-col space-y-1">
+                        <label for="to" class="text-xs font-bold text-gray-700">To:</label>
+                        <input type="text" id="to" value="rexravita@gmail.com" disabled class="w-full xp-input bg-gray-200 cursor-not-allowed">
+                    </div>
+                    <div class="flex flex-col space-y-1">
+                        <label for="subject" class="text-xs font-bold text-gray-700">Subject:</label>
+                        <input type="text" id="subject" placeholder="Inquiry about your portfolio..." required class="w-full xp-input">
+                    </div>
+                    <div class="flex flex-col space-y-1">
+                        <label for="name" class="text-xs font-bold text-gray-700">Your Name:</label>
+                        <input type="text" id="name" placeholder="John Doe" required class="w-full xp-input">
+                    </div>
+                    <div class="flex flex-col space-y-1">
+                        <label for="email" class="text-xs font-bold text-gray-700">Your Email:</label>
+                        <input type="email" id="email" placeholder="john.doe@email.com" required class="w-full xp-input">
+                    </div>
+                    <div class="flex flex-col space-y-1">
+                        <label for="body" class="text-xs font-bold text-gray-700">Message Body:</label>
+                        <textarea id="body" rows="4" required class="w-full xp-input"></textarea>
+                    </div>
+                    <div class="flex justify-end space-x-3 pt-4">
+                        <button type="submit" class="xp-button">Send</button>
+                        <button type="button" class="xp-button">Cancel</button>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+        <!-- Social Media Shortcuts (The desktop icons) -->
+        <div class="fixed bottom-10 right-10 flex flex-col space-y-3">
+             <a href="https://www.linkedin.com/in/rex-ravita-ii-995629186/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition" title="LinkedIn">
+                <i data-lucide="linkedin" class="w-8 h-8 drop-shadow-lg"></i>
+            </a>
+            <a href="http://twitter.com/rexravita" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition" title="Twitter">
+                <i data-lucide="twitter" class="w-8 h-8 drop-shadow-lg"></i>
+            </a>
+            <a href="http://instagram.com/rexravita" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition" title="Instagram">
+                <i data-lucide="instagram" class="w-8 h-8 drop-shadow-lg"></i>
+            </a>
+        </div>
+
+
+    </div> <!-- End Main Container -->
+
+    <!-- JavaScript for Form Alert and Icons -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Simple form submission handler (preventing default action)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Display message simulating an XP Dialog Box
+            const form = e.target;
+            const messageBox = document.createElement('div');
+            messageBox.innerHTML = `
+                <div class="fixed inset-0 bg-black bg-opacity-30 z-[100] flex items-center justify-center p-4">
+                    <div class="xp-window p-6 max-w-xs w-full text-center">
+                        <div class="xp-title-bar mb-4">Message Sent</div>
+                        <div class="flex items-center space-x-3 mb-4">
+                             <i data-lucide="check-circle" class="w-6 h-6 text-green-600"></i>
+                             <p class="text-sm font-semibold text-gray-700">Mail sent successfully!</p>
+                        </div>
+                        
+                        <button class="xp-button" onclick="this.closest('.fixed').remove()">
+                            OK
+                        </button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(messageBox);
+            lucide.createIcons();
+            form.reset();
+        });
+    </script>
+</body>
+</html>
